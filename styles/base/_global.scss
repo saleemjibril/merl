@@ -1,0 +1,58 @@
+html {
+  // font-size: 62.5%;
+  font-size: calc(100vw / 1440 * 10);
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+
+  @media (min-width: 1440px) {
+    font-size: 62.5%;
+  }
+
+  @media (max-width: $phone) {
+    font-size: calc(100vw / 550 * 10);
+  }
+}
+:root {
+  scroll-behavior: smooth;
+    scroll-padding-top: 160px; 
+
+
+  --font-primary: var(--font-inter), sans-serif;
+}
+body {
+  font-family: var(--font-primary);
+  font-size: $text-normal;
+  color: $text-color;
+  background: #f0f0f0;
+}
+
+.main {
+  // padding-top: 8.4rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 1440px;
+  width: 100%;
+  margin: auto;
+
+  @media (max-width: $phone) {
+    margin: 0 auto;
+  }
+}
+
+.hidden-scroll-bar {
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.pointer {
+  cursor: pointer;
+}
